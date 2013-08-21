@@ -8,27 +8,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.*;
-/*
 
-Otsimise muster peab sisaldama CamelCase'is kirjutatud klassinimede
-suuri tähti õiges järjekorras, mille vahel võivad olla ka järgnevad
-väikesed tähed otsingutulemuste täpsustuseks, näiteks: "FB", "FoBa" ja
-"FBar" peavad kõik leidma klasse "a.b.FooBarBaz" ja "c.d.FooBar".
-
-Kui muster lõppeb tühikuga, siis mustri viimane sõna peab olema ka
-viimaseks sõnaks leitud klassinimes, näiteks "FBar " leiab "FooBar"i,
-aga mitte "FooBarBaz"i.
-
-Mustris võivad esineda ka tärnid (*), mis matchivad suvalisi sõnu
-algandmetes, näiteks " mõlemad leiavad "FooBarBaz"i.
-
-Otsingu tulemus peab olema sorteeritud tähestikulises järjekorras
-klassi nimede järgi (ilma package nimedeta).
-
-Lahenduses ei tohi kasutada regexp'i. Unit Testid peavad ka olemas olema.
-
-Kui on küsitavusi, kuidas ikka see otsimise muster toimib siis võid IntelliJ idea's selle ise järgi proovida.
-*/
 
 public class ClassFinder {
 
